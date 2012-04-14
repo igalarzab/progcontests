@@ -10,6 +10,7 @@
 
 import sys
 
+
 def solve(movements):
     copy = movements[:]
     blue, orange = ([], [])
@@ -30,7 +31,7 @@ def solve(movements):
             bpos += 1
         elif blue and bpos > movements[blue[0]][1]:
             bpos -= 1
-        else: # ==
+        else:  # ==
             if copy and copy[0][0] == 'B':
                 mblue = True
 
@@ -65,7 +66,7 @@ if __name__ == '__main__':
 
     for i in xrange(cases):
         line = sys.stdin.readline().split()[1:]
-        movs = [(line[j], int(line[j+1])) for j in xrange(0, len(line), 2)]
-        print("Case #%d: %d" % (i+1, solve(movs)))
+        movs = [(line[j], int(line[j + 1])) for j in xrange(0, len(line), 2)]
+        print("Case #%d: %d" % (i + 1, solve(movs)))
 
 # vim: ai ts=4 sts=4 et sw=4
