@@ -40,8 +40,7 @@ if __name__ == '__main__':
     cases = int(sys.stdin.readline())
 
     for i in xrange(cases):
-        line = sys.stdin.readline().split()[1:]
-        print("Case #%d: %d" % (i + 1,
-            solve(int(line[0]), int(line[1]), map(int, line[2:]))))
+        line = map(int, sys.stdin.readline().split())
+        print("Case #%d: %d" % (i + 1, solve(line[1], line[2], line[3:])))
 
 # vim: ai ts=4 sts=4 et sw=4
